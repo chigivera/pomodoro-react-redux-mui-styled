@@ -16,8 +16,11 @@ const sessionSlice = createSlice({
             if(state.value <= 0) return
             state.value--;
         },
+        resetSession: (state) => {
+            state.value = initialState.value
+        }
     },
 });
 
-export const { incrementSession,decrementSession } = sessionSlice.actions;
+export const { incrementSession,decrementSession,resetSession } = sessionSlice.actions;
 export default sessionSlice.reducer;

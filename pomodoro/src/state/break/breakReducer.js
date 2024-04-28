@@ -16,8 +16,11 @@ const breakSlice = createSlice({
             if(state.value <= 0) return
             state.value--;
         },
+        resetBreak: (state) => {
+            state.value = initialState.value
+        }
     },
 });
 
-export const { incrementBreak,decrementBreak } = breakSlice.actions;
+export const { incrementBreak,decrementBreak,resetBreak } = breakSlice.actions;
 export default breakSlice.reducer;
